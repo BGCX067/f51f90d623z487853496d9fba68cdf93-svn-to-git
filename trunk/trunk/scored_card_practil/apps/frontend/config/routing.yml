@@ -1,0 +1,88 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: inicio, action: index }
+
+strategy:
+  url: create_strategy
+  param: { module: create_strategy, action : index}
+
+list_strategy:
+  url: list_strategy
+  param: { module: list_strategy, action : index}
+
+list_working_groups:
+  url: working_groups
+  param: { module: working_groups, action : index}
+
+accept_group:
+  url: working_groups/accept_group
+  param: { module: working_groups, action : accept_group}
+  
+edit_strategy:
+  url: edit_strategy/strategy/:id_tree
+  param: { module: edit_strategy, action : strategy}
+
+indicator:
+  url: edit_strategy/indicator/
+  param: { module: edit_strategy, action : indicator}
+
+saveindicador:
+  url: edit_strategy/save_indicator/
+  param: { module: edit_strategy, action : save_indicator}
+
+production_s:
+  url: production_strategy
+  param: { module: production_strategy, action : index}
+  
+ajax_mostrar_tree:
+  url: ajax_mostrar_tree
+  param: { module: production_strategy, action : ajax_mostrar_tree}
+
+ajax_mostrar_indicators:
+  url: ajax_mostrar_indicators
+  param: { module: production_strategy, action : ajax_mostrar_indicators}
+
+ajax_mostrar_graphics:
+  url: ajax_mostrar_graphics
+  param: { module: production_strategy, action : ajax_mostrar_graphics}
+
+reports:
+  url: reports
+  param: { module: reports, action : index}
+
+ajax_reports:
+  url: ajax_reports
+  param: { module: reports, action : ajax_reports}
+
+ajax_show_records_indicators:
+  url: ajax_show_records_indicators
+  param: { module: reports, action : ajax_show_records_indicators}
+
+ajax_show_gauge_indicators:
+  url: ajax_show_gauge_indicators
+  param: { module: reports, action : ajax_show_gauge_indicators}
+
+responsibilities:
+  url: my_responsibilities
+  param: { module: my_responsibilities, action : index}
+
+googleAnalyticsConnect:
+  url: edit_strategy/googleAnalyticsConnect
+  param: { module: edit_strategy, action : googleAnalyticsConnect}
+
+oauthcallback:
+  url: edit_strategy/oauthcallback
+  param: { module: edit_strategy, action : oauthcallback}
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

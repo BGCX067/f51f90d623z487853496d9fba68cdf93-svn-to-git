@@ -1,0 +1,106 @@
+.contend-list-strategy {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   float: left;   
+   width: 100%;height: auto;
+   margin-top: 2px;
+}
+.contend-list-strategy  div{
+    height: 17px;
+}
+
+
+.list-strategy-first-column{
+   float: left;
+   padding: 2px;
+   width: 200px;height: auto;
+   background-color: #F7F7F7;
+   border: 1px solid silver;  
+}
+
+.list-strategy-second-column{
+   float: left;
+   padding: 2px;
+   width: 100px;height: auto;
+   background-color: #F7F7F7;
+   border: 1px solid silver;
+   text-align: center;
+   margin-left: 1px;
+}
+
+.list-strategy-edit-column{
+  float: left;
+   padding: 2px;
+   width: 35px;height: auto;
+   background-color: #F7F7F7;
+   border: 1px solid silver;
+   text-align: center;
+   margin-left: 1px;
+}
+
+
+.title-edit-indicator{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+}
+.title-edit-indicator input[type="text"]{
+    border:2px solid #DDDDDD;
+    width: 300px;
+    height: 35px;
+    text-align: center;
+    font-weight: bold;
+    background: #CCFFEE;
+}
+
+.contend-datos-edit-indicator {
+    border:0px solid red;
+    width: 565px;
+    height: 350px;
+}
+
+
+.cls-list-contact{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #E28C8C;
+    border-radius: 4px 4px 4px 4px;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    position: absolute;
+    display: none;
+    z-index: 1001;
+    background: #EFEFEF;
+    width: 180px;
+
+}
+.cls-list-contact ul{
+width: 100%;
+}
+.cls-list-contact ul li{
+ float: left;
+ text-align: left;
+ margin: 0px;
+ height: 20px;
+ cursor: pointer;
+width: 100%;
+}
+.cls-list-contact ul li span{
+    padding-left: 3px;
+}
+.cls-list-contact ul li:hover{
+  background: #E0E0E0;
+  border-radius: 4px 4px 4px 4px;
+
+}
+
+.cls-div-responsable{
+    width: auto;
+    height: auto;
+    border: 1px solid #27BADB;
+    border-radius: 4px 4px 4px 4px;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+}
+

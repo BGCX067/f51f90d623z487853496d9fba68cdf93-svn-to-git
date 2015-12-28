@@ -1,0 +1,16 @@
+.login {
+    float: right;
+    padding-bottom: 5px;
+}
+.login input[type="text"]{
+    width: 100px;
+    height: 20px;    
+}
+.login input[type="password"]{
+    width: 100px;
+    height: 20px;
+}
+
+a {
+    text-decoration: none;
+}

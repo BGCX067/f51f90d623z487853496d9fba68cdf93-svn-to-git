@@ -1,0 +1,134 @@
+.cls-txt-tree{
+    width: 135px;float: left;
+    margin-left: 5px;height: auto;
+    border: 0px solid;
+    font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-size:xx-small;
+}
+
+.cls-div{
+    width: 25px; height: 100%; float: left;
+}
+
+.validator{
+     background-color: red;
+}
+
+
+
+.listado_estrategia{
+   height: 24px;width: 100%;
+   background: url("../images/implementacion/fondo-tabla1.gif");
+
+}
+.listado_estrategia ul{
+   margin: 0px;
+}
+.listado_estrategia ul li{
+    float: left;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial;
+    height: 24px;
+    padding-top: 4px;
+}
+
+.listado_contenido{
+       height: 24px;width: 100%;
+        background: url("../images/implementacion/fondo-tabla2.gif");
+       margin-bottom: 0px;margin-top: 1px;
+}
+.listado_contenido ul,.listado_contenido_impar ul{
+   margin: 0px;
+}
+
+ .listado_contenido ul li, .listado_contenido_impar ul li{
+    float: left;
+    color: white;
+    font-size: 12px;
+    font-family: Arial;
+    height: 24px;
+    color: black;
+    padding-left: 5px;
+ }
+
+.listado_contenido_impar{
+       height: 24px;width: 100%;
+       background: url("../images/implementacion/fondo-tabla3.gif");
+       margin-bottom: 0px;margin-top: 1px;
+}
+
+.listado_contenido_impar:hover{
+      background: url("../images/implementacion/fondo-tabla2.gif");
+}
+
+.listado_contenido:hover{
+     background: url("../images/implementacion/fondo-tabla3.gif");
+ }
+
+.listado_human{
+   height: 24px;width: auto;
+   background: #373737;
+
+}
+.listado_human ul{
+   margin: 0px;
+}
+.listado_human ul li{
+    float: left;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial;
+    height: 24px;
+    padding-top: 4px;
+}
+
+.title-group-human{
+    float: left;
+    color: #68C6D2;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+    height: 22px;
+    padding-left: 8px;
+}
+
+.title-contenido-group-human{
+       height: 24px;width: 100%;
+       margin-bottom: 0px;margin-top: 1px;
+       background: #E9E9E9;
+}
+.title-contenido-group-human ul{
+   margin: 0px;
+}
+
+ .title-contenido-group-human ul li{
+    float: left;
+    color: white;
+    font-size: 12px;
+    font-family: Arial;
+    height: 24px;
+    color: black;
+ }
+
+ .human-ul-option{
+     float: right;
+    }
+ .human-ul-option ul{
+        margin: 0px;
+ }
+
+ .human-ul-option ul li{
+        margin: 0px;
+        height: 20px;
+ }
+
+ .cls-txt{
+    float: left;
+    margin-left: 5px;height: auto;
+    border: 0px solid;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11px;
+}

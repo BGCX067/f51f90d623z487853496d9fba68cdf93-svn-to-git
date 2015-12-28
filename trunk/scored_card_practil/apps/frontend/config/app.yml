@@ -1,0 +1,12 @@
+all:
+  #url_practil: http://clientes.esferamedia.info/practil/web/
+  url_practil: http://localhost/practil/web/frontend_dev.php/
+  #url_practil: http://www.practil.com
+  #url_scorecard: http://clientes.esferamedia.info/scorecard/web/
+  url_scorecard: http://localhost/score_card_practil/trunk/scored_card_practil/web/frontend_dev.php/
+  url_mozilla_browser_es : http://www.mozilla.org/en-US/firefox/all.html
+  module_user_xml:  xml_servicio_usuario/
+  module_user_json: json_servicio_usuario/
+  session_current_user : s_current_user
+  session_current_user_name : s_current_user_name
+  session_tree_production : s_tree_prodcution

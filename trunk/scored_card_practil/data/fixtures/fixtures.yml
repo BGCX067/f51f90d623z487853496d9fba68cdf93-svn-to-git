@@ -1,0 +1,316 @@
+UserSc:
+  UserSc_1:
+    email: cesar.quevedo.vega@gmail.com
+    profile: '9'
+    password: admin
+    created_at: '2011-12-05 20:21:46'
+    flag: '1'
+    options: '{"helpStrategy1":"true","helpStrategy2":"false","helpStrategy":"true"}'
+  UserSc_2:
+    email: anolte@profuturo.com.pe
+    profile: '16'
+    password: 21232f297a57a5a743894a0e4a801fc3
+    created_at: '2011-12-05 20:21:46'
+    flag: '1'
+  UserSc_3:
+    email: fdelrio@executiveforums.com
+    profile: '17'
+    password: 7c4bb7a0458185d24e3086bf6ef91147
+    created_at: '2012-01-09 17:02:51'
+    flag: '1'
+  UserSc_4:
+    email: gperez@profuturo.com.pe
+    profile: '18'
+    password: profuturodigital
+    created_at: '2012-01-10 21:32:58'
+    flag: '1'
+PeriodoSc:
+  PeriodoSc_1:
+    descripcion: semanalmente
+    flag: activo
+  PeriodoSc_2:
+    descripcion: quincenalmente
+    flag: activo
+  PeriodoSc_3:
+    descripcion: mensualmente
+    flag: activo
+GrupoTrabajoSc:
+  GrupoTrabajoSc_1:
+    name: esfera
+    owner_id: UserSc_1
+    flag: '1'
+    create_at: '2012-04-10 22:26:01'
+    update_at: '2012-04-10 22:26:01'
+    human_flag: '1'
+    human_higher: off
+    human_lower: on
+    human_me: off
+TreeSc:
+  TreeSc_1:
+    name: 'Primera Estrategia'
+    user_id: UserSc_1
+    grupo_trabajo_id: GrupoTrabajoSc_1
+    periodo_id: PeriodoSc_1
+    responsable_id: UserSc_1
+    email_responsable: cesar.quevedo.vega@gmail.com
+    valor_minimo: '0'
+    valor_deseado: '0'
+    configure_flag: ''
+    flag: '1'
+    create_at: '2012-04-10 22:26:40'
+    update_at: '2012-04-10 22:26:40'
+    configure_design: ''
+    produccion: not
+Network:
+  Network_1:
+    name: Facebook
+  Network_2:
+    name: Twitter
+  Network_3:
+    name: 'Google Analytics'
+Attribute:
+  Attribute_1:
+    key_word: likes
+    description_short: 'Me gusta'
+    description: 'Este atributo es la cantidad de likes de una pÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡gina en facebook'
+  Attribute_2:
+    key_word: talking_about_count
+    description_short: 'Personas hablando de esto'
+    description: 'Cantidad de personas que estÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡n hablando de esto'
+  Attribute_3:
+    key_word: followers_count
+    description_short: Seguidores
+    description: 'Cantidad de seguidores en Twitter'
+  Attribute_4:
+    key_word: 'ga:visits'
+    description_short: Visitas
+    description: 'Cantidad de visitas en el tiempo ingresado'
+  Attribute_5:
+    key_word: 'ga:newVisits'
+    description_short: 'Visitas nuevas'
+    description: 'Cantidad de visitas nuevas en el tiempo ingresado'
+  Attribute_6:
+    key_word: 'ga:percentNewVisits'
+    description_short: 'Porcentage de visitas nuevas'
+    description: 'Porcentage de visitas nuevas en el tiempo ingresado'
+  Attribute_7:
+    key_word: 'ga:avgTimeOnSite'
+    description_short: 'Promedio de duraciÃƒÆ’Ã‚Â³n de las visitas'
+    description: 'Promedio de duraciÃƒÆ’Ã‚Â³n de las visitas en el tiempo ingresado'
+  Attribute_8:
+    key_word: 'ga:bounces'
+    description_short: 'The total number of single page'
+    description: 'The total number of single page (or single engagement hit) sessions to your website.'
+  Attribute_9:
+    key_word: 'ga:timeOnSite'
+    description_short: 'The total duration of visitor sessions'
+    description: 'The total duration of visitor sessions represented in total seconds.'
+  Attribute_10:
+    key_word: 'ga:visitors'
+    description_short: 'Total number of visitors to your website'
+    description: 'Total number of visitors to your website for the requested time period.'
+DetNetworkAttribute:
+  DetNetworkAttribute_1:
+    network_id: Network_1
+    attribute_id: Attribute_1
+  DetNetworkAttribute_2:
+    network_id: Network_1
+    attribute_id: Attribute_2
+  DetNetworkAttribute_3:
+    network_id: Network_2
+    attribute_id: Attribute_3
+  DetNetworkAttribute_4:
+    network_id: Network_3
+    attribute_id: Attribute_4
+  DetNetworkAttribute_5:
+    network_id: Network_3
+    attribute_id: Attribute_5
+  DetNetworkAttribute_6:
+    network_id: Network_3
+    attribute_id: Attribute_6
+  DetNetworkAttribute_7:
+    network_id: Network_3
+    attribute_id: Attribute_7
+  DetNetworkAttribute_8:
+    network_id: Network_3
+    attribute_id: Attribute_8
+  DetNetworkAttribute_9:
+    network_id: Network_3
+    attribute_id: Attribute_9
+  DetNetworkAttribute_10:
+    network_id: Network_3
+    attribute_id: Attribute_10
+IndicatorsSc:
+  IndicatorsSc_1:
+    titulo: 'Actividad 01'
+    descripcion: ''
+    valor_minimo: '30'
+    valor_deseado: '60'
+    valor_optimo: '100'
+    responsable_id: UserSc_1
+    tree_id: TreeSc_1
+    previous_id: '0'
+    ultimo_nodo: ''
+    valor_actual_entregado: '0'
+    email_responsable: cesar.quevedo.vega@gmail.com
+    flag: habilitado
+  IndicatorsSc_2:
+    titulo: 'Actividad 02'
+    descripcion: ''
+    valor_minimo: '30'
+    valor_deseado: '60'
+    valor_optimo: '100'
+    responsable_id: UserSc_1
+    tree_id: TreeSc_1
+    previous_id: '0'
+    ultimo_nodo: ''
+    valor_actual_entregado: '0'
+    email_responsable: cesar.quevedo.vega@gmail.com
+    flag: habilitado
+  IndicatorsSc_3:
+    titulo: 'Actividad 03'
+    descripcion: ''
+    valor_minimo: '20'
+    valor_deseado: '30'
+    valor_optimo: '100'
+    responsable_id: UserSc_1
+    tree_id: TreeSc_1
+    previous_id: '1'
+    parents: p1s-
+    ultimo_nodo: ''
+    valor_actual_entregado: '0'
+    conectores_configure: '60'
+    email_responsable: cesar.quevedo.vega@gmail.com
+    flag: habilitado
+  IndicatorsSc_4:
+    titulo: 'Actividad 04'
+    descripcion: ''
+    valor_minimo: '30'
+    valor_deseado: '40'
+    valor_optimo: '55'
+    responsable_id: UserSc_1
+    tree_id: TreeSc_1
+    previous_id: '2'
+    parents: p2s-
+    ultimo_nodo: '1'
+    valor_actual_entregado: '0'
+    conectores_configure: '100'
+    email_responsable: cesar.quevedo.vega@gmail.com
+    flag: habilitado
+  IndicatorsSc_5:
+    titulo: 'Actividad 05'
+    descripcion: ''
+    valor_minimo: '20'
+    valor_deseado: '30'
+    valor_optimo: '50'
+    responsable_id: UserSc_1
+    tree_id: TreeSc_1
+    previous_id: '1'
+    parents: p1s-
+    ultimo_nodo: '1'
+    valor_actual_entregado: '0'
+    conectores_configure: '30'
+    email_responsable: cesar.quevedo.vega@gmail.com
+    flag: habilitado
+  IndicatorsSc_6:
+    titulo: 'Actividad 06'
+    descripcion: ''
+    valor_minimo: '80'
+    valor_deseado: '150'
+    valor_optimo: '200'
+    responsable_id: UserSc_1
+    tree_id: TreeSc_1
+    previous_id: '3'
+    parents: p1s-p3s-
+    ultimo_nodo: '1'
+    valor_actual_entregado: '0'
+    conectores_configure: '30'
+    email_responsable: cesar.quevedo.vega@gmail.com
+    flag: habilitado
+  IndicatorsSc_7:
+    titulo: 'Actividad 07'
+    descripcion: ''
+    valor_minimo: '1'
+    valor_deseado: '3'
+    valor_optimo: '5'
+    responsable_id: UserSc_1
+    tree_id: TreeSc_1
+    previous_id: '3'
+    parents: p1s-p3s-
+    ultimo_nodo: '1'
+    valor_actual_entregado: '0'
+    conectores_configure: '30'
+    email_responsable: cesar.quevedo.vega@gmail.com
+    flag: habilitado
+AsignacionSc:
+  AsignacionSc_1:
+    email: cesar.quevedo.vega@gmail.com
+    tree_id: TreeSc_1
+    indicador_id: IndicatorsSc_1
+    flag: '{"estado":true,"owner_id":1}'
+    user_id: UserSc_1
+    create_at: '2012-04-12 22:23:51'
+    update_at: '2012-04-12 22:23:51'
+  AsignacionSc_2:
+    email: cesar.quevedo.vega@gmail.com
+    tree_id: TreeSc_1
+    indicador_id: IndicatorsSc_3
+    flag: '{"estado":true,"owner_id":1}'
+    user_id: UserSc_1
+    create_at: '2012-04-12 22:24:13'
+    update_at: '2012-04-12 22:24:13'
+  AsignacionSc_3:
+    email: cesar.quevedo.vega@gmail.com
+    tree_id: TreeSc_1
+    indicador_id: IndicatorsSc_5
+    flag: '{"estado":true,"owner_id":1}'
+    user_id: UserSc_1
+    create_at: '2012-04-12 22:24:34'
+    update_at: '2012-04-12 22:24:34'
+  AsignacionSc_4:
+    email: cesar.quevedo.vega@gmail.com
+    tree_id: TreeSc_1
+    indicador_id: IndicatorsSc_6
+    flag: '{"estado":true,"owner_id":1}'
+    user_id: UserSc_1
+    create_at: '2012-04-12 22:24:56'
+    update_at: '2012-04-12 22:24:56'
+  AsignacionSc_5:
+    email: cesar.quevedo.vega@gmail.com
+    tree_id: TreeSc_1
+    indicador_id: IndicatorsSc_7
+    flag: '{"estado":true,"owner_id":1}'
+    user_id: UserSc_1
+    create_at: '2012-04-12 22:25:10'
+    update_at: '2012-04-12 22:25:10'
+  AsignacionSc_6:
+    email: cesar.quevedo.vega@gmail.com
+    tree_id: TreeSc_1
+    indicador_id: IndicatorsSc_4
+    flag: '{"estado":true,"owner_id":1}'
+    user_id: UserSc_1
+    create_at: '2012-04-12 22:25:24'
+    update_at: '2012-04-12 22:25:24'
+  AsignacionSc_7:
+    email: cesar.quevedo.vega@gmail.com
+    tree_id: TreeSc_1
+    indicador_id: IndicatorsSc_2
+    flag: '{"estado":true,"owner_id":1}'
+    user_id: UserSc_1
+    create_at: '2012-04-12 22:25:33'
+    update_at: '2012-04-12 22:25:33'
+DetalleGrupoTrabajoSc:
+  DetalleGrupoTrabajoSc_1:
+    email: cesar.quevedo.vega@gmail.com
+    bost_id: '0'
+    user_id: UserSc_1
+    grupo_id: GrupoTrabajoSc_1
+TreeUser:
+  TreeUser_1:
+    user_id: UserSc_1
+    tree_id: TreeSc_1
+UserGoogleConfiguration:
+  UserGoogleConfiguration_1:
+    google_client_id: 69462501819.apps.googleusercontent.com
+    google_client_secret: 9MJNA41q7NeYMPOPED_ErP8T
+    user_id: UserSc_1

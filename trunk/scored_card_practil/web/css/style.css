@@ -1,0 +1,231 @@
+@import "signInPractil.css";
+
+.contend-list-strategy {
+   font-family:  Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   float: left;   
+   width: 100%;height: auto;
+   margin-top: 2px;
+}
+.contend-list-strategy  div{
+    height: 17px;
+}
+
+
+.list-strategy-first-column{
+   float: left;
+   padding: 2px;
+   width: 200px;height: auto;
+   background-color: #F7F7F7;
+   border: 1px solid silver;  
+}
+
+.list-strategy-second-column{
+   float: left;
+   padding: 2px;
+   width: 100px;height: auto;
+   background-color: #F7F7F7;
+   border: 1px solid silver;
+   text-align: center;
+   margin-left: 1px;
+}
+
+.list-strategy-edit-column{
+  float: left;
+   padding: 2px;
+   width: 35px;height: auto;
+   background-color: #F7F7F7;
+   border: 1px solid silver;
+   text-align: center;
+   margin-left: 1px;
+}
+
+
+.title-edit-indicator
+{
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    text-align: center;
+}
+.title-edit-indicator input[type="text"]{
+    font-size: 15px;
+    font-weight: bold;
+    color: #4c4c4c;
+    border-color:#666666;
+    border-style:dashed;
+    border-width:2px;
+    width: 90%;
+    text-align: center;
+    background-color: #FFF;
+    outline: none;
+}
+.title-edit-indicator input[type="text"]:focus
+{
+   background-color: #FFF9D7;
+}
+
+
+
+.contend-datos-edit-indicator
+{
+    border:0px solid red;   
+}
+
+
+.cls-list-contact{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid gray;    
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    position: absolute;
+    display: none;
+    z-index: 1001;
+    background: #FFFFFF;
+    width: auto;
+    margin-left: 68px;
+    margin-top: 1px;
+    
+}
+.cls-list-contact ul{
+width: 100%;
+}
+.cls-list-contact ul li{
+ 
+ text-align: left;
+ margin: 0px;
+ height: 20px;
+ cursor: pointer;
+width: 100%;
+
+}
+.cls-list-contact li{
+ width: auto;
+ margin: 0px auto;
+}
+.cls-list-contact ul li{
+    padding-left: 6px;
+    color: gray;
+    padding-right: 7px;
+}
+.cls-list-contact li:hover{
+  background: #208FEB;
+  color: white;
+ 
+}
+
+.cls-div-responsable{
+    width: auto;
+    height: auto;
+    border: 1px solid #27BADB;
+    border-radius: 4px 4px 4px 4px;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+}
+
+.add-message{
+        display: none;
+        position: absolute;
+        float: left;
+        width: 972px;
+        height: 45px;
+        margin-bottom: 12px;
+        margin-left: 9px;
+        z-index: 500;
+        font-family: Arial;
+        font-size: 13px;
+        text-align: center;
+        padding-top: 10px;
+}
+
+.message-browser
+{
+    font-family:  arial,helvetica,sans-serif;
+    font-size: 12px;
+    margin: 12px auto;
+    padding: 22px 0px;
+    padding-left: 15px;
+    width: 968px;
+}
+
+.message-comun
+{
+    font-family:  arial,helvetica,sans-serif;
+    font-size: 11px;
+    margin: 10px auto;
+    padding: 10px;
+    width: auto;
+}
+
+.btn-dowload-fire
+{
+    background-image: url('../images/firefox.png');
+    padding: 17px 39px;
+    margin-left: 50px;
+}
+
+
+.btn-dowload-fire span
+{
+    color: white;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 11px;
+    padding-left: 17px;
+    font-weight: bold;
+}
+
+
+ .fondo-registro
+    {
+        background-image: url('../images/implementacion/fondo_registro.png');
+        width: 306px;
+        height: 206px;
+    }
+
+  .home
+  {
+    vertical-align: top;
+    display: inline-block;
+  }
+
+.home h2{
+    color: #3B3B3B;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 17px;
+    text-align: center;
+
+}
+
+.home p{
+    color: #6F6F6F;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.pasos-edit-estrategia
+{
+    background: url('../images/implementacion/pasos-edit-estrategia.jpg');  
+    height: 68px; 
+    display: block;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 978px;
+}
+
+.pasos-edit-estrategia div
+{
+    display: inline-block;
+    font-family: Arial, cursive;
+    font-size: 12px;
+
+}
+
+.pasos-edit-estrategia div h2
+{
+   color:#858E93;
+   font-size: 16px;
+}

@@ -1,0 +1,220 @@
+propel:
+
+  periodo_sc:
+    id:
+    descripcion:   {type: varchar(100),required:true}
+    flag:          {type: varchar(100),required:true}
+
+  user_sc:
+    id:
+    email:         {type: varchar(50),requiered: true}
+    profile:       {type: integer,requiered: true}
+    password:      {type: varchar(50),requiered: true}
+    created_at:    {type: timestamp,requiered: true}
+    flag:          {type: longvarchar,requiered: true}
+    token_session: {type: longvarchar,requiered: false}
+    options:       {type: longvarchar,requiered: false}
+
+  user_google_configuration:
+    id:
+    google_client_id: {type: longvarchar, required: false}
+    google_client_secret: {type: longvarchar, required: false}
+    user_id: {type: integer, foreignTable: user_sc,foreignReference: id, required: true}
+
+  tree_sc:
+    id:
+    name:              {type: longvarchar,requiered: true}
+    descripcion:       {type: longvarchar,requiered: false}
+    user_id:           {type: integer, foreignTable: user_sc,foreignReference: id, required: true}
+    grupo_trabajo_id:  {type: integer, foreignTable: grupo_trabajo_sc,foreignReference: id, required: false}
+    periodo_id:        {type: integer, foreignTable: periodo_sc,foreignReference: id, required: false}
+    responsable_id:    {type: integer,foreignTable: user_sc,foreignReference: id, required: false}
+    email_responsable: {type: varchar(50),requiered: true}
+    valor_minimo:      {type: integer,requiered: true}
+    valor_deseado:     {type: integer,requiered: true}
+    configure_flag:    {type: longvarchar,requiered: true}
+    flag:              {type: longvarchar,requiered: true}
+    create_at:         {type: timestamp,requiered: true}
+    update_at:         {type: timestamp,requiered: true}
+    configure_design:  {type: longvarchar}
+    produccion:        {type: longvarchar,requiered: true}
+
+  tree_user:
+    id:
+    user_id:          {type: integer, foreignTable: user_sc,foreignReference: id, required: true}
+    tree_id:          {type: integer,foreignTable: tree_sc,foreignReference: id, required: true}
+
+  indicators_sc:
+    id:
+    titulo:                      {type: varchar(250),required: true}
+    descripcion:                 {type: longvarchar,requiered: true}
+    valor_minimo:                {type: integer,requiered: true}
+    valor_deseado:               {type: integer,requiered: true}
+    valor_optimo:                {type: integer,requiered: true}
+    responsable_id:              {type: integer,foreignTable: user_sc,foreignReference: id, required: false}
+    tree_id:                     {type: integer,foreignTable: tree_sc,foreignReference: id, required: true}
+    previous_id:                 {type: integer,requiered: true}
+    parents:                     {type: longvarchar,requiered: false}
+    # p1s-p7s-p9s-p8s
+    indicadores_hijos_configure: {type: longvarchar,requiered: false}
+    ultimo_nodo:                 {type: varchar(5),requiered: true}
+    valor_actual_entregado:      {type: integer,requiered: false}
+    conectores_configure:        {type: longvarchar,requiered: false}
+    owner_indicadores:           {type: longvarchar}
+    email_responsable:           {type: varchar(50),requiered: true}
+    flag:                        {type: longvarchar,requiered: true}
+#agregadas por Pedro - 28/11/2011
+    det_network_attribute_id: {type: integer, foreignTable: det_network_attribute, foreignReference: id, required: false, default: null}
+    username_in_network: {type: longvarchar, required: false}
+    ga_fec_ini: {type: timestamp, required: false}
+    ga_fec_fin: {type: timestamp, required: false}
+#END agregadas por Pedro - 28/11/2011
+
+  projections_indicators_cs:
+    id:
+    indicador_id:  {type: integer,foreignTable: indicators_sc,foreignReference: id, required: true}
+    fecha:         {type: timestamp,requiered: true}
+    valor_minimo:  {type: integer,requiered: true}
+    valor_deseado: {type: integer,requiered: true}
+    valor_optimo:  {type: integer,requiered: true}
+    flag:          {type: longvarchar,requiered: false}
+
+  grupo_trabajo_sc:
+    id:
+    name:         {type: varchar(250),required: true}
+    owner_id:     {type: integer, foreignTable: user_sc,foreignReference: id, required: true}
+    flag:         {type: longvarchar,requiered: true}
+    create_at:    {type: timestamp,requiered: true}
+    update_at:    {type: timestamp,requiered: true}    
+    human_flag:   {type: longvarchar,requiered: true}
+    human_periodo_id:   {type: integer, foreignTable: periodo_sc,foreignReference: id, required: false}
+    human_higher: {type: varchar(3),requiered: true}
+    human_lower:  {type: varchar(3),requiered: true}
+    human_me:     {type: varchar(3),requiered: true}
+
+  question_human_sc:
+    id:
+    user_id:    {type: integer, foreignTable: user_sc,foreignReference: id, required: true}
+    grupo_id:   {type: integer, foreignTable: grupo_trabajo_sc,foreignReference: id, required: true}
+    question:   {type: longvarchar,requiered: true}
+    flag:       {type: longvarchar,requiered: true}    
+    create_at:  {type: timestamp,requiered: true}
+ #los 3 tipos de evaluacion
+   #hacia mi inferior
+   #hacia mi superior
+   #hacia mi mismo
+  tipo_evaluaciones:
+    id:
+    descripcion: {type: longvarchar,requiered: true}
+    flag:        {type: longvarchar,requiered: true} 
+
+  head_evaluaciones:
+    id:
+    user_id:     {type: integer, foreignTable: user_sc,foreignReference: id, required: true}
+    create_at:   {type: timestamp,requiered: true}
+    update_at:   {type: timestamp,requiered: true}
+    flag:        {type: longvarchar,requiered: true}
+   
+  evaluaciones_user:
+    id:
+    question_id:   {type: integer, foreignTable: question_human_sc,foreignReference: id, required: true}
+    type_question: {type: integer, foreignTable: tipo_evaluaciones,foreignReference: id, required: true}
+    evaluated:     {type: integer, foreignTable: user_sc,foreignReference: id, required: true}
+    head_id:       {type: integer, foreignTable: head_evaluaciones,foreignReference: id, required: true}
+    flag:          {type: longvarchar,requiered: true}
+    respuesta:     {type: integer,requiered: true}
+
+  detalle_grupo_trabajo_sc:
+    id:
+    email:      {type: varchar(50),required: true}
+    bost_id:    {type: integer,required: true}
+    user_id:    {type: integer, foreignTable: user_sc,foreignReference: id, required: false}
+    grupo_id:   {type: integer, foreignTable: grupo_trabajo_sc,foreignReference: id, required: false}
+
+  solicitud_grupo_trabajo_sc:
+    id:
+    grupo_id:      {type: integer, foreignTable: grupo_trabajo_sc,foreignReference: id, required: false}
+    email:         {type: varchar(50),required: true}
+    create_at:     {type: timestamp,requiered: true}
+    update_at:     {type: timestamp,requiered: true}
+    user_id:       {type: integer, foreignTable: user_sc,foreignReference: id, required: false}
+    token:         {type: longvarchar,requiered: true}
+    flag:          {type: longvarchar,requiered: true}
+    respondido:    {type: integer,requiered: true}
+
+  asignacion_sc:
+    id:
+    grupo_id:      {type: integer, foreignTable: grupo_trabajo_sc,foreignReference: id, required: false}
+    email:         {type: varchar(50),required: true}
+    tree_id:       {type: integer,foreignTable: tree_sc,foreignReference: id, required: true}
+    indicador_id:  {type: integer,foreignTable: indicators_sc,foreignReference: id, required: true}
+    flag:          {type: longvarchar,requiered: true}
+    user_id:       {type: integer, foreignTable: user_sc,foreignReference: id, required: false}
+    create_at:     {type: timestamp,requiered: true}
+    update_at:     {type: timestamp,requiered: true}
+
+#agregadas por Pedro - 28/11/2011
+  network:
+    id:
+    name: {type: varchar(255), required: true}
+  attribute:
+    id:
+    key_word: {type: longvarchar, required: true}
+    description_short: {type: varchar(255), required: true}
+    description: {type: longvarchar, required: true}
+  det_network_attribute:
+    id:
+    network_id: {type: integer, foreignTable: network, foreignReference: id, required: true}
+    attribute_id: {type: integer, foreignTable: attribute, foreignReference: id, required: true}
+
+  indicadores_sc_google_analytics:
+    id:
+    refresh_token: {type: longvarchar, required: true}
+    google_user_email: {type: varchar(255), required: true}
+    indicador_id: {type: integer, foreignTable: indicators_sc, foreignReference: id, required: true}
+#END agregadas por Pedro - 28/11/2011
+
+  group_data_indicadores:
+    id:
+    create_at:      {type: timestamp,requiered: true}
+    tree_id:        {type: integer, foreignTable: tree_sc,foreignReference: id, required: false}
+
+  data_indicadores:
+    id:
+    indicador_id:   {type: integer, foreignTable: indicators_sc,foreignReference: id, required: true}
+    user_id:        {type: integer, foreignTable: user_sc,foreignReference: id, required: true}
+    data:           {type: integer, required: true}
+    group_data:     {type: integer, foreignTable: group_data_indicadores,foreignReference: id, required: true}
+    create_at:      {type: timestamp,requiered: true}
+    update_at:      {type: timestamp,requiered: true}
+
+  audit_data_indicadores:
+    id:
+    indicador_id:   {type: integer, foreignTable: data_indicadores,foreignReference: id, required: true}
+    data:           {type: integer, required: true}
+    create_at:      {type: timestamp,requiered: true}
+
+
+  tmp_tree_sc:
+    id:
+    valor_minimo:      {type: integer,requiered: true}
+    valor_deseado:     {type: integer,requiered: true}
+    configure_flag:    {type: longvarchar,requiered: true}
+    flag:              {type: varchar(5), requiered: true}
+
+  tmp_data_reports:
+    id:
+    indicador_id:                {type: integer,requiered: true}
+    valor_minimo:                {type: integer,requiered: true}
+    valor_deseado:               {type: integer,requiered: true}
+    valor_optimo:                {type: integer,requiered: true}
+    tree_id:                     {type: integer,foreignTable: tmp_tree_sc,foreignReference: id, required: true}
+    previous_id:                 {type: integer,requiered: true}
+    parents:                     {type: longvarchar,requiered: false}
+    # p1s-p7s-p9s-p8s
+    indicadores_hijos_configure: {type: longvarchar,requiered: false}
+    ultimo_nodo:                 {type: varchar(5),requiered: true}
+    data:                        {type: integer,requiered: false}
+    conectores_configure:        {type: longvarchar,requiered: false}
+    update_at:                   {type: timestamp,requiered: true}
+    flag:                        {type: varchar(5), requiered : false}

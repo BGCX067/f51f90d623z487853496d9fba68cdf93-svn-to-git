@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [scorecard_css.css,main.css,inicio.css,login.css,style.css,ui/jquery.ui.all.css,grid/ui.jqgrid.css,grid/ui.multiselect.css]
+
+  javascripts:    [jquery.min.js,jquery-ui.js,grid/i18n/grid.locale-es.js,grid/jquery.jqGrid.min.js,dotimeout.js,sc.js,sc-ajax.js,sc-tree.js]
+
+  has_layout:     true
+  layout:         layout

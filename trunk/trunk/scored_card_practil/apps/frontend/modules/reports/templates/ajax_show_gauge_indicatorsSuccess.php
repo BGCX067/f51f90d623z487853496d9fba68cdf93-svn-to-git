@@ -1,0 +1,1 @@
+<?php echo $json = '{"porcentaje": '.$valor_porcentaje.',"nombre":'.$nombre.'}';?>

@@ -1,0 +1,161 @@
+  # You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: home, action: index }
+
+configuration:
+  url: configuration
+  param: { module: configuration, action : index}
+
+configuration_save:
+  url: configuration/save
+  param: { module: configuration, action : save}
+
+strategy:
+  url: create_strategy
+  param: { module: create_strategy, action : index}
+
+list_strategy:
+  url: list_strategy
+  param: { module: list_strategy, action : index}
+
+list_working_groups:
+  url: working_groups
+  param: { module: working_groups, action : index}
+
+projections_start:
+  url: projections
+  param: { module: projections, action : index}
+
+accept_group:
+  url: working_groups/accept_group
+  param: { module: working_groups, action : accept_group}
+
+edit_strategy:
+  url: edit_strategy/strategy/
+  param: { module: edit_strategy, action : strategy}
+
+indicator:
+  url: edit_strategy/indicator/
+  param: { module: edit_strategy, action : indicator}
+
+saveindicador:
+  url: edit_strategy/save_indicator/
+  param: { module: edit_strategy, action : save_indicator}
+
+production_s:
+  url: production_strategy
+  param: { module: production_strategy, action : index}
+
+ajax_mostrar_tree:
+  url: ajax_mostrar_tree
+  param: { module: production_strategy, action : ajax_mostrar_tree}
+
+ajax_mostrar_indicators:
+  url: ajax_mostrar_indicators
+  param: { module: production_strategy, action : ajax_mostrar_indicators}
+
+ajax_mostrar_graphics:
+  url: ajax_mostrar_graphics
+  param: { module: production_strategy, action : ajax_mostrar_graphics}
+
+reports:
+  url: reports
+  param: { module: reports, action : index}
+
+ajax_reports:
+  url: ajax_reports
+  param: { module: reports, action : ajax_reports}
+
+ajax_show_records_indicators:
+  url: ajax_show_records_indicators
+  param: { module: reports, action : ajax_show_records_indicators}
+
+ajax_show_gauge_indicators:
+  url: ajax_show_gauge_indicators
+  param: { module: reports, action : ajax_show_gauge_indicators}
+
+responsibilities:
+  url: my_responsibilities
+  param: { module: my_responsibilities, action : index}
+
+googleAnalyticsConnect:
+  url: edit_strategy/googleAnalyticsConnect
+  param: { module: edit_strategy, action : googleAnalyticsConnect}
+
+oauthcallback:
+  url: edit_strategy/oauthcallback
+  param: { module: edit_strategy, action : oauthcallback}
+
+googleConnectTutorial:
+  url: tutorial/googleConnectTutorial
+  param: { module: tutorial, action : googleConnectTutorial}
+
+CronUpdateIndicatorScData:
+  url: my_responsibilities/CronUpdateIndicatorScData
+  param: { module: my_responsibilities, action : cronUpdateIndicatorScData}
+
+humanscorecard_ajax:
+  url: human/add_new_question_human
+  param: { module: human, action : add_new_question_human}
+
+humanscorecard_edit_ajax:
+  url: human/edit_question_human
+  param: { module: human, action : edit_question_human}
+
+humanscorecard_edit_check_ajax:
+  url: human/edit_question_human_check
+  param: { module: human, action : edit_question_human_check}
+
+
+humanscorecard_surveys_answers:
+  url: human/surveys_answers
+  param: {module: human, action: surveys_answers}
+
+humanscorecard_cron_question:
+  url: human/cron_human
+  param: {module: human, action: cron_human}
+
+humans_surveys:
+  url: human/surveys
+  param: {module: human, action: surveys}
+
+humanscorecard_surveys_ajax:
+  url: human/a_surveys_ajax
+  param: {module: human, action: a_surveys_ajax}
+
+humanscorecard_delete_question:
+  url: human/delete_question_human_ajax
+  param: {module: human, action: delete_question_human_ajax}
+
+humanscorecard_edit_configuration:
+  url: human/edit_configuration_human_check
+  param: {module: human, action: edit_configuration_human_check}
+
+humanscorecard_edit_periodo:
+  url: human/humanscorecard_edit_periodo
+  param: {module: human, action: humanscorecard_edit_periodo}
+
+humanscorecard_state_human:
+  url: human/humanscorecard_state_human
+  param: {module: human, action: humanscorecard_state_human}
+
+humanscorecard_list_human_group:
+  url: human/list_human_group
+  param: {module: human, action: list_human_group}
+
+humanscorecard:
+  url: human/
+  param: { module: human, action : index}
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
